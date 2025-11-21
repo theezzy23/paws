@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Paws</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1><img src="static/images/paw-icon.png" alt="Paw Icon" class="paw-icon"> Paws
+            </h1>
+            <p>Find your purr-fect match</p>
+        </header>
+
+        <main id="main-content">
+            <div id="card-stack" class="card-stack">
+                <!-- Cards will be injected here -->
+                <div class="loading-indicator">Fetching kitties... 🐾</div>
+            </div>
+
+            <div class="controls">
+                <button id="btn-dislike" class="control-btn dislike" aria-label="Dislike">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <button id="btn-like" class="control-btn like" aria-label="Like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </main>
+
+        <section id="summary-view" class="summary-view hidden">
+            <h2>Your Favorites</h2>
+            <p>You liked <span id="liked-count">0</span> cats!</p>
+            <div id="liked-grid" class="liked-grid">
+                <!-- Liked cats will be injected here -->
+            </div>
+            <button id="btn-restart" class="primary-btn">Start Over</button>
+        </section>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
